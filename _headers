@@ -1,0 +1,4 @@
+# Cloudflare settings. While this deployment is only a preview, keep search engines from listing it.
+# Remove this rule at launch (see TODO.md).
+/*
+  X-Robots-Tag: noindex
