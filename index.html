@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Middlebrook Agrihood — Cumming, Iowa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/tcg6hwg.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="nav" data-nav>
+      <a href="index.html" class="nav-brand" aria-label="Middlebrook home">
+        <svg viewBox="0 0 30 26" aria-hidden="true" focusable="false">
+          <path d="M15 1L28 10V25H2V10L15 1Z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M6 25V14H24V25" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M10 25V17H14V25" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </svg>
+        <span class="serif nav-wordmark">Middlebrook</span>
+      </a>
+
+      <button class="nav-search" type="button" aria-label="Search the site" data-search-open>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l5 5"/></svg>
+      </button>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="nav-menu" id="site-menu" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-about">
+              About<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-about">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Our Story</p>
+                  <p class="nav-panel-text">Middlebrook is an established Agrihood in Cumming, Iowa, where homes of every size and price point share the same streets, connected by front porches, walking paths, and events on the Farm.</p>
+                  <a href="#" class="underline-link">About Middlebrook</a>
+                </div>
+                <div class="nav-panel-links">
+                  <ul class="nav-panel-list">
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="#">Our Team</a></li>
+                  </ul>
+                </div>
+                <a href="#" class="nav-feature">
+                  <img src="images/Interactive-Map/Townhomes/09-middlebrook-homestead-townhomes-aerial.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">Middlebrook from above</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-live-build">
+              Live &amp; Build<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-live-build">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Find your place</p>
+                  <p class="nav-panel-text">Single-family homes, villas, cottages, townhomes, and lofts, all built to Middlebrook's design guidelines. Bring your own builder or start from our floor plans.</p>
+                  <a href="#" class="underline-link">Explore Home Types</a>
+                </div>
+                <div class="nav-panel-links">
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Home Types</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="homes-for-sale.html">Homes for Sale</a></li>
+                      <li><a href="single-family.html">Single-Family Homes</a></li>
+                      <li><a href="villas.html">The Villas</a></li>
+                      <li><a href="cottages.html">The Cottages</a></li>
+                      <li><a href="townhomes.html">The Townhomes</a></li>
+                      <li><a href="#">The Lofts</a></li>
+                      <li><a href="lots.html">Lots</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Plan &amp; Build</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="floor-plans.html">Floor Plans</a></li>
+                      <li><a href="design-guidelines.html">Design Guidelines &amp; Philosophy</a></li>
+                      <li><a href="geothermal.html">Geothermal</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="#" class="nav-feature">
+                  <img src="images/Interactive-Map/Townhomes/01-middlebrook-homestead-townhomes-aerial-at-sunset.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">The Townhomes</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-visit">
+              Visit<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-visit">
+              <div class="nav-panel-inner nav-panel-inner--wide">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Spend the day</p>
+                  <p class="nav-panel-text">Local shops, dining, trails, and green space, all connected by walkable streets and paths.</p>
+                  <a href="#" class="underline-link">Business Directory</a>
+                  <a href="#" class="nav-feature">
+                    <img src="images/middlebrook-farm-celosia-field-mercantile-schoolhouse.jpg" alt="" loading="lazy" decoding="async">
+                    <span class="nav-feature-caption">The Farm</span>
+                  </a>
+                </div>
+                <div class="nav-panel-links">
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Shop &amp; Dine</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="#">Wilson's Orchard &amp; Farm</a></li>
+                      <li><a href="#">The Merc</a></li>
+                      <li><a href="#">The Farmstand</a></li>
+                      <li><a href="#">Cups &amp; Cones</a></li>
+                      <li><a href="#">Bloom</a></li>
+                      <li><a href="#">FreeBird &amp; Co</a></li>
+                      <li><a href="#">Reese Marie Salon</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Outdoors</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="town-garden.html">Town Garden</a></li>
+                      <li><a href="middlebrook-meadow.html">The Meadow</a></li>
+                      <li><a href="great-western-trail.html">Great Western Bike Trail</a></li>
+                      <li><a href="mayor-tom-becker-park.html">Mayor Tom Becker Park</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Stay</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="middlebrook-farmhouse.html">The Farmhouse Airbnb</a></li>
+                      <li><a href="middlebrook-vacation-rental.html">Luxury Vacation Airbnb</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-events">
+              Events<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-events">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Gather often</p>
+                  <p class="nav-panel-text">Live music, seasonal festivals, and dinners on the Farm Grounds bring neighbors and visitors together.</p>
+                  <a href="#" class="underline-link">Event Calendar</a>
+                </div>
+                <div class="nav-panel-links">
+                  <ul class="nav-panel-list">
+                    <li><a href="fridays-at-the-farm.html">Fridays at the Farm</a></li>
+                    <li><a href="smoke-and-sip-bbq-festival.html">Smoke &amp; Sip BBQ Festival</a></li>
+                    <li><a href="farm-to-table-dinners.html">Farm to Table Dinners</a></li>
+                    <li><a href="#">Porchfest</a></li>
+                  </ul>
+                </div>
+                <a href="farm-to-table-dinners.html" class="nav-feature">
+                  <img src="images/home/hero/middlebrook-home-hero-farm-to-table.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">Farm to Table Dinners</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-rentals">
+              Private Rentals<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-rentals">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Host your event</p>
+                  <p class="nav-panel-text">Celebrate at the Farmhouse and Farm Grounds, book The Merc for a private event, or plan a photo session on The Farm.</p>
+                  <a href="#" class="underline-link">Private Rentals</a>
+                </div>
+                <div class="nav-panel-links">
+                  <ul class="nav-panel-list">
+                    <li><a href="farmhouse-and-farm-grounds.html">Farmhouse &amp; Farm Grounds</a></li>
+                    <li><a href="mercantile-private-rental.html">The Merc Private Rental</a></li>
+                    <li><a href="private-photography.html">Private Photography</a></li>
+                  </ul>
+                </div>
+                <a href="farmhouse-and-farm-grounds.html" class="nav-feature">
+                  <img src="images/middlebrook-farmhouse-event-live-music.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">The Farmhouse</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <a href="index.html#request-info" class="btn-outline nav-cta">Request Info</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Middlebrook hero section">
+        <div class="hero-overlay"></div>
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light">Middlebrook Agrihood · Cumming, Iowa</p>
+          <h1 class="serif hero-headline">A working farm, a growing neighborhood, and a life designed for close community.</h1>
+          <div class="hero-actions">
+            <a href="#live-build" class="btn-dark">Live in the Agrihood</a>
+            <a href="#map" class="underline-link hero-link">Explore the Map</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weekly content lives in this-week.js. Edit that file, not this markup. -->
+      <section class="this-week" aria-labelledby="this-week-title" data-this-week-section>
+        <div class="this-week-panel">
+          <div class="this-week-header">
+            <h2 class="serif this-week-title" id="this-week-title">This week at Middlebrook</h2>
+            <p class="label this-week-date" data-week-of></p>
+          </div>
+          <ul class="this-week-list" data-this-week></ul>
+        </div>
+      </section>
+
+      <section class="map-teaser" id="map" aria-label="Interactive map teaser">
+        <!-- Pins come from map.js, shared with every page -->
+        <div class="map-photo" data-map-pins></div>
+
+        <div class="map-card">
+          <img src="images/brand/sprigs/sprig-30.svg" alt="" class="sprig" aria-hidden="true">
+          <h2 class="serif map-card-heading">Find your way around the Agrihood</h2>
+          <p class="map-card-body">From the Town Garden to the Great Western Bike Trail, every destination at Middlebrook is connected by a walkable rhythm, generous green space, and a sense of everyday ease.</p>
+          <a href="#map" class="underline-link map-card-link" data-open-map>Explore the full map</a>
+        </div>
+      </section>
+
+      <section class="live-build cream-texture" id="live-build">
+        <div class="live-build-inner">
+          <div class="live-build-photos">
+            <img class="live-build-photo-main" src="images/middlebrook-townhomes-new-construction.jpg" alt="Aerial view of The Townhomes at sunset, with walking paths curving through the green space" loading="lazy" decoding="async">
+            <img class="live-build-photo-inset" src="images/Interactive-Map/Townhomes/Two-story/05-middlebrook-homestead-townhome-kitchen-island-field-views.jpg" alt="Kitchen with a white island, pendant lights, and windows overlooking open fields in a Middlebrook townhome" loading="lazy" decoding="async">
+          </div>
+
+          <div class="live-build-copy">
+            <p class="eyebrow eyebrow-mustard">Live &amp; Build</p>
+            <h2 class="serif live-build-heading">Homes designed for everyday life, close to the people who matter most.</h2>
+            <p class="body-copy">Middlebrook brings together flexible home types, private entrances, and generous outdoor living, creating a neighborhood that works for growing families, close relatives, and the rhythm of a multigenerational life.</p>
+            <p class="body-copy">Choose from move-in ready homes, floor plans, or builders within our design guidelines. Every home follows the same guidelines: front porches face the street, and garages never dominate it.</p>
+            <div class="live-build-links">
+              <a href="#" class="underline-link">Explore Home Types</a>
+              <a href="floor-plans.html" class="underline-link">View Floor Plans</a>
+              <a href="design-guidelines.html" class="underline-link">Design Guidelines &amp; Philosophy</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- One quote per page. The quote text lives in testimonials.js under the name given in data-testimonial. -->
+      <section class="resident-voices" aria-label="Resident feedback" data-testimonial="home">
+        <div class="resident-voices-inner">
+          <article class="resident-feature">
+            <h2 class="label resident-label">In their own words</h2>
+            <svg class="resident-mark" viewBox="0 0 40 30" fill="none" aria-hidden="true">
+              <path d="M2 18C2 9 7 3 15 2C15 7 11 9 11 14C14 14 16 17 16 20C16 25 12 28 8 28C4 28 2 24 2 18Z" fill="currentColor"/>
+              <path d="M22 18C22 9 27 3 35 2C35 7 31 9 31 14C34 14 36 17 36 20C36 25 32 28 28 28C24 28 22 24 22 18Z" fill="currentColor"/>
+            </svg>
+            <p class="serif resident-feature-text" data-testimonial-quote></p>
+            <p class="quote-name" data-testimonial-name></p>
+            <button class="resident-video-button" type="button" aria-haspopup="dialog">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5L12 8l-7 4.5v-9Z"/></svg>
+              <span>Watch resident testimonials</span>
+            </button>
+          </article>
+          <figure class="resident-photo" hidden>
+            <img src="" alt="" loading="lazy" decoding="async" data-testimonial-photo>
+          </figure>
+        </div>
+        <dialog class="townhome-video-dialog resident-video-dialog" aria-labelledby="resident-video-title">
+          <div class="townhome-video-heading">
+            <h2 id="resident-video-title">Middlebrook Resident Testimonials</h2>
+            <button class="townhome-video-close" type="button" aria-label="Close video">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg>
+            </button>
+          </div>
+          <iframe title="Middlebrook Resident Testimonials" data-embed-src="https://www.youtube-nocookie.com/embed/zSxcyEDtm8A?autoplay=1&amp;rel=0&amp;playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </dialog>
+      </section>
+
+      <figure class="photo-bleed">
+        <img src="images/home/hero/middlebrook-home-hero-farm-to-table.webp" alt="Guests seated at a long table under string lights at dusk, with a guitarist playing beside the garden" loading="lazy" decoding="async">
+        <figcaption class="photo-bleed-caption">
+          <span class="label">Farm to Table Dinner</span>
+          <span class="photo-bleed-place">Middlebrook Farm</span>
+        </figcaption>
+      </figure>
+
+      <section class="events" id="events" aria-label="Events at Middlebrook">
+        <div class="events-inner">
+          <div class="events-header">
+            <h2 class="serif">Something is always happening at The Farm</h2>
+            <a href="#" class="underline-link">Full Event Calendar</a>
+          </div>
+
+          <div class="events-grid">
+            <article class="event-card">
+              <div class="event-gallery pin-gallery" aria-label="Fridays at the Farm photos">
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/01-middlebrook-fridays-at-the-farm-band-on-porch.webp" alt="Band performs on the Farmhouse porch under string lights" data-gallery-image>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/02-middlebrook-fridays-at-the-farm-picnic-gathering.webp" alt="Friends and family gather around a picnic table at Fridays at the Farm" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/03-middlebrook-fridays-at-the-farm-guests-and-dog.webp" alt="Guests relax with a dog and drinks during the outdoor event" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/04-middlebrook-fridays-at-the-farm-drink-truck.webp" alt="Guests visit a drink truck at Fridays at the Farm" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/05-middlebrook-fridays-at-the-farm-food-truck-crowd.webp" alt="Guests gather near a food truck at Fridays at the Farm" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/06-middlebrook-fridays-at-the-farm-bikes-and-guests.webp" alt="Bikes parked near guests gathered under the trees" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/07-middlebrook-fridays-at-the-farm-children-at-fence.webp" alt="Children watch the festivities from a wooden fence" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/08-middlebrook-fridays-at-the-farm-audience-under-lights.webp" alt="Visitors sit beneath string lights during an outdoor performance" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/09-middlebrook-fridays-at-the-farm-live-music-performer.webp" alt="Musician performs on the Farmhouse porch at Fridays at the Farm" data-gallery-image hidden>
+                <img class="event-gallery-image" src="images/home/Fridays-at-the-Farm/11-middlebrook-fridays-at-the-farm-flower-garden-visitors.webp" alt="Visitors walk through the flower garden during Fridays at the Farm" data-gallery-image hidden>
+                <button class="pin-gallery-control pin-gallery-prev" type="button" aria-label="Previous Fridays at the Farm photo">
+                  <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8.5 1.5L4 6l4.5 4.5"/></svg>
+                </button>
+                <div class="event-gallery-dots" role="group" aria-label="Choose a Fridays at the Farm photo">
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 1 of 10" aria-current="true"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 2 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 3 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 4 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 5 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 6 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 7 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 8 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 9 of 10" aria-current="false"></button>
+                  <button class="event-gallery-dot" type="button" data-gallery-dot aria-label="Show photo 10 of 10" aria-current="false"></button>
+                </div>
+                <button class="pin-gallery-control pin-gallery-next" type="button" aria-label="Next Fridays at the Farm photo">
+                  <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 1.5L8 6l-4.5 4.5"/></svg>
+                </button>
+              </div>
+              <div class="event-body">
+                <h3 class="serif">Fridays at the Farm</h3>
+                <p>Live music, local vendors, food trucks, kids' activities, and a relaxing atmosphere every Friday, May through September.</p>
+                <a href="fridays-at-the-farm.html" class="underline-link">About Fridays at the Farm</a>
+                <button class="btn-dark event-video-button" type="button" aria-haspopup="dialog">
+                  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5L12 8l-7 4.5v-9Z"/></svg>
+                  <span>Watch event video</span>
+                </button>
+              </div>
+              <dialog class="townhome-video-dialog fridays-video-dialog" aria-labelledby="fridays-video-title">
+                <div class="townhome-video-heading">
+                  <h2 id="fridays-video-title">Fridays at the Farm</h2>
+                  <button class="townhome-video-close" type="button" aria-label="Close video">
+                    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg>
+                  </button>
+                </div>
+                <video controls playsinline preload="none" poster="images/middlebrook-farmhouse-event-live-music.webp">
+                  <source src="images/home/middlebrook-fridays-at-the-farm-video.mp4" type="video/mp4">
+                  Your browser does not support embedded video.
+                </video>
+              </dialog>
+            </article>
+
+            <article class="event-card">
+              <div class="event-photo event-photo-two"></div>
+              <div class="event-body">
+                <h3 class="serif">Private Rentals</h3>
+                <p>Gather at the Farmhouse, The Mercantile, or on the Farm Grounds for celebrations that feel rooted in place.</p>
+                <a href="#" class="underline-link">Learn More</a>
+              </div>
+            </article>
+
+            <article class="event-card">
+              <div class="event-photo event-photo-three"></div>
+              <div class="event-body">
+                <h3 class="serif">Community Events</h3>
+                <p>From dinner gatherings to seasonal festivals, there is always something to attend, enjoy, and share.</p>
+                <a href="#" class="underline-link">Learn More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-band texture" aria-label="Middlebrook at a glance">
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="accent stat-value">800</div>
+            <div class="stat-label">acres at full build-out</div>
+          </div>
+          <div class="stat">
+            <div class="accent stat-value">30<span class="stat-unit">%</span></div>
+            <div class="stat-label">reserved for agriculture and recreation</div>
+          </div>
+          <div class="stat">
+            <div class="accent stat-value">2,000</div>
+            <div class="stat-label">residents when fully realized</div>
+          </div>
+          <div class="stat">
+            <div class="accent stat-value">100</div>
+            <div class="stat-label">local businesses once fully built out</div>
+          </div>
+          <div class="stat">
+            <div class="accent stat-value">15<span class="stat-unit">min</span></div>
+            <div class="stat-label">walk to the Town Garden from anywhere</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overlap feature: reusable on any page. Swap the two images and the copy.
+           The backdrop is blurred automatically, so any photo with soft color works there.
+           Default: the card rises out of white space, with the backdrop starting partway down.
+           Add "overlap-feature--full" (as here) to run the backdrop all the way to the section above. -->
+      <section class="overlap-feature overlap-feature--full" id="about" aria-labelledby="philosophy-title">
+        <div class="overlap-feature-backdrop" aria-hidden="true">
+          <img src="images/middlebrook-farm-celosia-field-mercantile-schoolhouse.jpg" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="overlap-feature-card">
+          <div class="overlap-feature-copy">
+            <img src="images/brand/sprigs/sprig-06.svg" alt="" class="sprig sprig-center" aria-hidden="true">
+            <h2 class="serif" id="philosophy-title">Rooted in the land, and in each other</h2>
+            <p class="body-copy">Middlebrook brings together the comfort of everyday life with the beauty of the outdoors. The community also makes significant use of geothermal energy. Families can gather at The Farm, take a short walk to the Town Garden, and create traditions that stretch across generations.</p>
+            <a href="#" class="underline-link">Learn More</a>
+          </div>
+          <img class="overlap-feature-photo" src="images/home/Fridays-at-the-Farm/11-middlebrook-fridays-at-the-farm-flower-garden-visitors.webp" alt="Visitors walk through the flower garden during Fridays at the Farm" loading="lazy" decoding="async">
+        </div>
+      </section>
+
+      <section class="request-info texture" id="request-info" aria-label="Request more information">
+        <img src="images/brand/sprigs/sprig-13.svg" alt="" class="sprig sprig-center" aria-hidden="true">
+        <h2 class="serif">Ready to see Middlebrook for yourself?</h2>
+        <p>Tell us what you are looking for and we will reach out with the next step, whether you are exploring a home, a lot, or the community itself.</p>
+        <a href="#" class="btn-outline request-info-cta">Request Info</a>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="stay">
+      <div class="footer-newsletter">
+        <div class="footer-newsletter-label">
+          <!-- Each page uses a different chicken: images/brand/chickens/chicken-01 to chicken-10 -->
+          <img src="images/brand/chickens/chicken-10.svg" alt="" class="footer-chicken" aria-hidden="true">
+          <p class="serif">Be the first to hear about new lineups, events, and homes at Middlebrook.</p>
+        </div>
+
+        <div class="footer-actions">
+          <form class="footer-form" id="newsletter" action="#" method="post">
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input id="newsletter-email" type="email" name="email" placeholder="Email" required>
+            <button type="submit" class="btn-dark">Submit</button>
+          </form>
+
+          <!-- Replace each "#" with the full profile address, e.g. https://www.instagram.com/yourhandle -->
+          <ul class="footer-social" aria-label="Middlebrook on social media">
+            <li>
+              <a href="#" target="_blank" rel="noopener" aria-label="Middlebrook on Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-fill" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10.5H7.8v3h2.6V21h3.1Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener" aria-label="Middlebrook on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-fill" cx="17.2" cy="6.8" r="1.1"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4 class="serif">About</h4>
+          <a href="vision.html">Vision</a>
+          <a href="#">Blog</a>
+          <a href="press.html">Press</a>
+          <a href="#">Our Team</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Live &amp; Build</h4>
+          <a href="homes-for-sale.html">Homes for Sale</a>
+          <a href="single-family.html">Single-Family Homes</a>
+          <a href="villas.html">The Villas</a>
+          <a href="cottages.html">The Cottages</a>
+          <a href="townhomes.html">The Townhomes</a>
+          <a href="#">The Lofts</a>
+          <a href="lots.html">Lots</a>
+          <a href="floor-plans.html">Floor Plans</a>
+          <a href="design-guidelines.html">Design Guidelines &amp; Philosophy</a>
+          <a href="geothermal.html">Geothermal</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Visit</h4>
+          <a href="town-garden.html">Town Garden</a>
+          <a href="#">Business Directory</a>
+          <a href="#">Parks &amp; Natural Spaces</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Events</h4>
+          <a href="#">Event Calendar</a>
+          <a href="fridays-at-the-farm.html">Fridays at the Farm</a>
+          <a href="smoke-and-sip-bbq-festival.html">Smoke &amp; Sip BBQ Festival</a>
+          <a href="farm-to-table-dinners.html">Farm to Table Dinners</a>
+          <a href="#">Porchfest</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Private Rentals</h4>
+          <a href="farmhouse-and-farm-grounds.html">Farmhouse &amp; Farm Grounds</a>
+          <a href="mercantile-private-rental.html">The Merc Private Rental</a>
+          <a href="private-photography.html">Private Photography</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Invest</h4>
+          <a href="#">Town Center Leasing</a>
+          <a href="#">LiveWork Townhomes</a>
+          <a href="#">Market Hall</a>
+          <a href="#">Middlebrook West Commercial</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-address">4300 Cumming Ave, Cumming, Iowa 50061 · 515.309.0705
+          <!-- Drive times come from drive-times.js -->
+          <span class="footer-drive" data-drive-line></span>
+        </span>
+        <span>&copy; <span id="year"></span> Middlebrook Agrihood</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="farm-stand.js"></script>
+
+  <script src="this-week.js"></script>
+  <script src="testimonials.js"></script>
+  <script src="drive-times.js"></script>
+  <script src="map.js"></script>
+  <script src="listings.js"></script>
+  <script src="search.js"></script>
+  <script src="script.js"></script>
+</body>

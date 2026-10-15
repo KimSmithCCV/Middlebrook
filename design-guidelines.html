@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Guidelines &amp; Philosophy | Middlebrook Agrihood, Cumming, Iowa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/tcg6hwg.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="nav-light">
+  <div class="page-wrap">
+    <header class="nav" data-nav>
+      <a href="index.html" class="nav-brand" aria-label="Middlebrook home">
+        <svg viewBox="0 0 30 26" aria-hidden="true" focusable="false">
+          <path d="M15 1L28 10V25H2V10L15 1Z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M6 25V14H24V25" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M10 25V17H14V25" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </svg>
+        <span class="serif nav-wordmark">Middlebrook</span>
+      </a>
+
+      <button class="nav-search" type="button" aria-label="Search the site" data-search-open>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l5 5"/></svg>
+      </button>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="nav-menu" id="site-menu" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-about">
+              About<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-about">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Our Story</p>
+                  <p class="nav-panel-text">Middlebrook is an established Agrihood in Cumming, Iowa, where homes of every size and price point share the same streets, connected by front porches, walking paths, and events on the Farm.</p>
+                  <a href="#" class="underline-link">About Middlebrook</a>
+                </div>
+                <div class="nav-panel-links">
+                  <ul class="nav-panel-list">
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="#">Our Team</a></li>
+                  </ul>
+                </div>
+                <a href="#" class="nav-feature">
+                  <img src="images/Interactive-Map/Townhomes/09-middlebrook-homestead-townhomes-aerial.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">Middlebrook from above</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-live-build">
+              Live &amp; Build<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-live-build">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Find your place</p>
+                  <p class="nav-panel-text">Single-family homes, villas, cottages, townhomes, and lofts, all built to Middlebrook's design guidelines. Bring your own builder or start from our floor plans.</p>
+                  <a href="#" class="underline-link">Explore Home Types</a>
+                </div>
+                <div class="nav-panel-links">
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Home Types</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="homes-for-sale.html">Homes for Sale</a></li>
+                      <li><a href="single-family.html">Single-Family Homes</a></li>
+                      <li><a href="villas.html">The Villas</a></li>
+                      <li><a href="cottages.html">The Cottages</a></li>
+                      <li><a href="townhomes.html">The Townhomes</a></li>
+                      <li><a href="#">The Lofts</a></li>
+                      <li><a href="lots.html">Lots</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Plan &amp; Build</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="floor-plans.html">Floor Plans</a></li>
+                      <li><a href="design-guidelines.html">Design Guidelines &amp; Philosophy</a></li>
+                      <li><a href="geothermal.html">Geothermal</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="#" class="nav-feature">
+                  <img src="images/Interactive-Map/Townhomes/01-middlebrook-homestead-townhomes-aerial-at-sunset.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">The Townhomes</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-visit">
+              Visit<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-visit">
+              <div class="nav-panel-inner nav-panel-inner--wide">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Spend the day</p>
+                  <p class="nav-panel-text">Local shops, dining, trails, and green space, all connected by walkable streets and paths.</p>
+                  <a href="#" class="underline-link">Business Directory</a>
+                  <a href="#" class="nav-feature">
+                    <img src="images/middlebrook-farm-celosia-field-mercantile-schoolhouse.jpg" alt="" loading="lazy" decoding="async">
+                    <span class="nav-feature-caption">The Farm</span>
+                  </a>
+                </div>
+                <div class="nav-panel-links">
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Shop &amp; Dine</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="#">Wilson's Orchard &amp; Farm</a></li>
+                      <li><a href="#">The Merc</a></li>
+                      <li><a href="#">The Farmstand</a></li>
+                      <li><a href="#">Cups &amp; Cones</a></li>
+                      <li><a href="#">Bloom</a></li>
+                      <li><a href="#">FreeBird &amp; Co</a></li>
+                      <li><a href="#">Reese Marie Salon</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Outdoors</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="town-garden.html">Town Garden</a></li>
+                      <li><a href="middlebrook-meadow.html">The Meadow</a></li>
+                      <li><a href="great-western-trail.html">Great Western Bike Trail</a></li>
+                      <li><a href="mayor-tom-becker-park.html">Mayor Tom Becker Park</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav-panel-group">
+                    <p class="nav-panel-label">Stay</p>
+                    <ul class="nav-panel-list">
+                      <li><a href="middlebrook-farmhouse.html">The Farmhouse Airbnb</a></li>
+                      <li><a href="middlebrook-vacation-rental.html">Luxury Vacation Airbnb</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-events">
+              Events<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-events">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Gather often</p>
+                  <p class="nav-panel-text">Live music, seasonal festivals, and dinners on the Farm Grounds bring neighbors and visitors together.</p>
+                  <a href="#" class="underline-link">Event Calendar</a>
+                </div>
+                <div class="nav-panel-links">
+                  <ul class="nav-panel-list">
+                    <li><a href="fridays-at-the-farm.html">Fridays at the Farm</a></li>
+                    <li><a href="smoke-and-sip-bbq-festival.html">Smoke &amp; Sip BBQ Festival</a></li>
+                    <li><a href="farm-to-table-dinners.html">Farm to Table Dinners</a></li>
+                    <li><a href="#">Porchfest</a></li>
+                  </ul>
+                </div>
+                <a href="farm-to-table-dinners.html" class="nav-feature">
+                  <img src="images/home/hero/middlebrook-home-hero-farm-to-table.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">Farm to Table Dinners</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-rentals">
+              Private Rentals<svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="nav-panel" id="menu-rentals">
+              <div class="nav-panel-inner">
+                <div class="nav-panel-intro">
+                  <p class="serif nav-panel-title">Host your event</p>
+                  <p class="nav-panel-text">Celebrate at the Farmhouse and Farm Grounds, book The Merc for a private event, or plan a photo session on The Farm.</p>
+                  <a href="#" class="underline-link">Private Rentals</a>
+                </div>
+                <div class="nav-panel-links">
+                  <ul class="nav-panel-list">
+                    <li><a href="farmhouse-and-farm-grounds.html">Farmhouse &amp; Farm Grounds</a></li>
+                    <li><a href="mercantile-private-rental.html">The Merc Private Rental</a></li>
+                    <li><a href="private-photography.html">Private Photography</a></li>
+                  </ul>
+                </div>
+                <a href="farmhouse-and-farm-grounds.html" class="nav-feature">
+                  <img src="images/middlebrook-farmhouse-event-live-music.webp" alt="" loading="lazy" decoding="async">
+                  <span class="nav-feature-caption">The Farmhouse</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <a href="index.html#request-info" class="btn-outline nav-cta">Request Info</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Sources: Great Western Crossing Design Guidelines (2022) and summary, and the architect's two Adobe Express pages
+           (Middlebrook Residential Style; The Front Porch: An American Icon). Sketches and drawings by the architect. -->
+      <section class="text-hero dg-hero" aria-labelledby="dg-title">
+        <div class="text-hero-inner">
+          <div class="text-hero-head">
+            <div>
+              <p class="eyebrow eyebrow-mustard">Live &amp; Build · Design Guidelines &amp; Philosophy</p>
+              <h1 class="serif text-hero-title" id="dg-title">Porches first. Garages second.</h1>
+            </div>
+            <p class="text-hero-lede">Great Western Crossing takes its cues from Des Moines’ most treasured historic neighborhoods, like Beaverdale, Waveland Park, Waterbury, and South of Grand. Every home is its own, and every home shares the same front porch, pitched roof, and welcoming front door.</p>
+          </div>
+          <figure class="text-hero-photo dg-hero-photo">
+            <img src="images/design-guidelines/middlebrook-design-guidelines-streetscape-porch-sketch.jpg" width="2400" height="1338" alt="Hand-drawn sketch of a Middlebrook street, with porch-front houses set behind a sidewalk and street trees" decoding="async">
+          </figure>
+        </div>
+      </section>
+
+      <!-- Philosophy: guideline intro (page 6) and the client's copy about the architect -->
+      <section class="dg-why" aria-labelledby="dg-why-title">
+        <div class="dg-why-inner">
+          <div class="dg-why-copy">
+            <h2 class="serif" id="dg-why-title">Built at the human scale</h2>
+            <p class="body-copy">The vision for Great Western Crossing centers on authentic architecture and a neighborhood built at the human scale, reinforced by Middlebrook’s agricultural amenities. Proper scale and proportion, combined with authentic details and variety along the street, create places to be treasured for generations.</p>
+            <p class="body-copy">Modern and traditional farmhouse styles fit the Agrihood’s character, alongside the craftsman bungalows and brick Tudors of historic Des Moines. Celebrating each home’s own details and textures lets modern, transitional, and traditional styles sit side by side.</p>
+            <p class="dg-why-architect">Learn more about the thought and inspiration that went into designing the style for the Middlebrook Agrihood. Our architect, JP Curran, shares his ideas, drawings, and references that influenced the look and architectural design standards that connect the development to agriculture and make each neighborhood unique throughout the community.</p>
+            <span class="meadow-links dg-links">
+              <a href="https://express.adobe.com/page/tEUt0OzjtuNgJ/" class="underline-link" target="_blank" rel="noopener">Middlebrook residential style</a>
+              <a href="https://express.adobe.com/page/vdWuzOxreGi08/" class="underline-link" target="_blank" rel="noopener">The front porch: an American icon</a>
+              <a href="https://express.adobe.com/page/7S9mCBC8HSeuI/" class="underline-link" target="_blank" rel="noopener">What is a town architect?</a>
+              <a href="https://express.adobe.com/page/p9O7KjNXmGG0y/" class="underline-link" target="_blank" rel="noopener">Bungalow courts</a>
+            </span>
+          </div>
+          <blockquote class="dg-why-quote">
+            <p class="serif">“Front porches are celebrated and front doors are welcoming. Rocking chairs and porch swings reinforce a pedestrian-first experience, while garages and automobiles are secondary.”</p>
+            <cite>Great Western Crossing Design Guidelines</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- The four approved styles. Numbers in each list match the circled numbers on that style's drawing. -->
+      <section class="dg-styles" id="styles" aria-labelledby="dg-styles-title" data-tabs>
+        <div class="dg-styles-inner">
+          <div class="dg-styles-head">
+            <h2 class="serif" id="dg-styles-title">Four styles, one street</h2>
+            <p>Unless a lot calls for a specific style, choose one of four. Stay true to it: massing, materials, window grids, and roof pitches all follow the style’s long-established patterns.</p>
+          </div>
+          <div class="dg-tabs" role="tablist" aria-label="Architectural styles">
+            <button type="button" role="tab" id="tab-farmhouse" aria-controls="panel-farmhouse" aria-selected="true">Vernacular Farmhouse</button>
+            <button type="button" role="tab" id="tab-craftsman" aria-controls="panel-craftsman" aria-selected="false" tabindex="-1">Waveland Park Craftsman</button>
+            <button type="button" role="tab" id="tab-brick" aria-controls="panel-brick" aria-selected="false" tabindex="-1">Beaverdale Brick</button>
+            <button type="button" role="tab" id="tab-modern" aria-controls="panel-modern" aria-selected="false" tabindex="-1">Transitional &amp; Contemporary</button>
+          </div>
+
+          <div class="dg-panel" role="tabpanel" id="panel-farmhouse" aria-labelledby="tab-farmhouse">
+            <div class="dg-panel-main">
+              <figure class="dg-drawing" data-lightbox-group>
+                <img src="images/design-guidelines/middlebrook-style-vernacular-farmhouse-drawing.jpg" width="1545" height="765" alt="Drawing of a vernacular farmhouse with a full-width front porch, simple gable roofs, and clapboard siding, with five numbered features" loading="lazy" decoding="async">
+              </figure>
+              <div class="dg-panel-copy">
+                <p class="body-copy">Iowa farmhouses grew out of the national folk house. As the railroad spread in the late 1800s, lumber arrived cheaply from across the country, and builders moved from timber post and beam to light wood framing. Forms stayed simple: gable-front, gable-front and wing, I-house, and cross gable.</p>
+                <ol class="dg-traits">
+                  <li>Functional porches, often full or partial width, sometimes wrapping</li>
+                  <li>Simple pitched gable roofs, front or side facing, often cross gabled</li>
+                  <li>Simple square porch posts with little or no ornament</li>
+                  <li>Horizontal clapboard with corner boards; board and batten also works</li>
+                  <li>Simple eaves, open with exposed rafter tails or enclosed with a cornice</li>
+                </ol>
+              </div>
+            </div>
+            <figure class="dg-massing">
+              <img src="images/design-guidelines/middlebrook-style-vernacular-farmhouse-massing.jpg" width="1874" height="404" alt="Three massing models of a farmhouse: cross gable, front gable, and side gable" loading="lazy" decoding="async">
+              <figcaption><span>Cross gable</span><span>Front gable</span><span>Side gable</span></figcaption>
+            </figure>
+            <div class="dg-examples" data-lightbox-group>
+              <img src="images/design-guidelines/middlebrook-style-vernacular-farmhouse-example-1.jpg" alt="A white two-story farmhouse with a wide front porch and a picket fence" loading="lazy" decoding="async">
+              <img src="images/design-guidelines/middlebrook-style-vernacular-farmhouse-example-2.jpg" alt="A dark gray farmhouse with a metal roof, a tall chimney, and a deep porch" loading="lazy" decoding="async">
+              <img src="images/design-guidelines/middlebrook-style-vernacular-farmhouse-example-3.jpg" alt="A white farmhouse with a wraparound porch and a stone path" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="dg-panel" role="tabpanel" id="panel-craftsman" aria-labelledby="tab-craftsman" hidden>
+            <div class="dg-panel-main">
+              <figure class="dg-drawing" data-lightbox-group>
+                <img src="images/design-guidelines/middlebrook-style-waveland-park-craftsman-drawing.jpg" width="1617" height="816" alt="Drawing of a craftsman bungalow with a deep porch on masonry piers, a low gable roof, and a shed dormer, with five numbered features" loading="lazy" decoding="async">
+              </figure>
+              <div class="dg-panel-copy">
+                <p class="body-copy">The early 20th century craftsman grew from the English Arts and Crafts movement, and the bungalow quickly spread across the country. Waveland Park, Drake, and Beaverdale all have a healthy stock of them. Most mix wood cladding and trim with brick or stone accents and foundations.</p>
+                <ol class="dg-traits">
+                  <li>Functional porches, full or partial width, on piers, columns, or both</li>
+                  <li>Low-pitched gable roofs, side or front facing</li>
+                  <li>Masonry piers or columns, often to the ground, sometimes tapered</li>
+                  <li>Deep open eaves with exposed rafter tails, knee braces, or brackets</li>
+                  <li>Exposed roof rafters</li>
+                </ol>
+              </div>
+            </div>
+            <figure class="dg-massing">
+              <img src="images/design-guidelines/middlebrook-style-waveland-park-craftsman-massing.jpg" width="1858" height="404" alt="Three massing models of a craftsman: side gable, front gable, and hip roof" loading="lazy" decoding="async">
+              <figcaption><span>Side gable</span><span>Front gable</span><span>Hip roof</span></figcaption>
+            </figure>
+            <div class="dg-examples" data-lightbox-group>
+              <img src="images/design-guidelines/middlebrook-style-waveland-park-craftsman-example-1.jpg" alt="A sage green craftsman bungalow with a stone chimney and a covered porch" loading="lazy" decoding="async">
+              <img src="images/design-guidelines/middlebrook-style-waveland-park-craftsman-example-2.jpg" alt="A blue-gray two-story craftsman with a full-width front porch" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="dg-panel" role="tabpanel" id="panel-brick" aria-labelledby="tab-brick" hidden>
+            <div class="dg-panel-main">
+              <figure class="dg-drawing" data-lightbox-group>
+                <img src="images/design-guidelines/middlebrook-style-beaverdale-brick-drawing.jpg" width="1173" height="777" alt="Drawing of a brick Tudor revival house with steep gables, a front chimney, and an arched entry, with five numbered features" loading="lazy" decoding="async">
+              </figure>
+              <div class="dg-panel-copy">
+                <p class="body-copy">The Beaverdale brick draws on the Tudor revival style popular in the 1920s and 1930s, when many Beaverdale homes were built. Modeled on medieval English houses, the American versions used light wood framing and brick veneer, and were more modest than their English cousins.</p>
+                <ol class="dg-traits">
+                  <li>Steeply pitched roofs, usually side gabled, often with several gable fronts</li>
+                  <li>Large chimneys, often on the front facade</li>
+                  <li>Natural brick with stone accents; brick ends at inside corners</li>
+                  <li>Asymmetrical front facades</li>
+                  <li>Arched front entries and doors</li>
+                </ol>
+              </div>
+            </div>
+            <figure class="dg-massing">
+              <img src="images/design-guidelines/middlebrook-style-beaverdale-brick-massing.jpg" width="1660" height="468" alt="Three massing models of a Tudor: multiple gable front, dominant gable front, and dormer gable front" loading="lazy" decoding="async">
+              <figcaption><span>Multiple gable front</span><span>Dominant gable front</span><span>Dormer gable front</span></figcaption>
+            </figure>
+            <div class="dg-examples" data-lightbox-group>
+              <img src="images/design-guidelines/middlebrook-style-beaverdale-brick-example-1.jpg" alt="A red brick Tudor with a steep front gable, a chimney, and an arched door" loading="lazy" decoding="async">
+              <img src="images/design-guidelines/middlebrook-style-beaverdale-brick-example-2.jpg" alt="A brick Tudor with green half-timbered gables" loading="lazy" decoding="async">
+              <img src="images/design-guidelines/middlebrook-style-beaverdale-brick-example-3.jpg" alt="A brick Tudor with a stone-trimmed arched entry and window boxes" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="dg-panel" role="tabpanel" id="panel-modern" aria-labelledby="tab-modern" hidden>
+            <div class="dg-panel-main dg-panel-main--modern">
+              <div class="dg-panel-copy">
+                <p class="body-copy">A small share of lots can take a more modern direction, built on the forms and massing of the traditional styles. Details stay simple and concise, with a restrained palette of materials and color, fine proportions, and tailored detailing. Like the other styles, each home sticks to one set of patterns.</p>
+                <p class="dg-modern-rule"><span class="accent">20%</span> At most one in five lots on a block, approved first come, first served. A block is the length of street between two other streets or paths.</p>
+              </div>
+              <div class="dg-examples dg-examples--modern" data-lightbox-group>
+                <img src="images/design-guidelines/middlebrook-style-transitional-contemporary-example-1.jpg" alt="A dark wood-clad modern gable house beside a white traditional house" loading="lazy" decoding="async">
+                <img src="images/design-guidelines/middlebrook-style-transitional-contemporary-example-2.jpg" alt="A white transitional house with a steep gable and an arched gate" loading="lazy" decoding="async">
+                <img src="images/design-guidelines/middlebrook-style-transitional-contemporary-example-3.jpg" alt="A modern gable house clad in light wood with a black entry" loading="lazy" decoding="async">
+                <img src="images/design-guidelines/middlebrook-style-transitional-contemporary-example-4.jpg" alt="A black board and batten modern gable house at dusk" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- From the architect's "Bungalow Courts" page (express.adobe.com/page/p9O7KjNXmGG0y). Written to describe the homes,
+           not who they are for (fair housing; see PROJECT_NOTES.md). Its photos show other communities and are not used. -->
+      <section class="dg-court" aria-labelledby="dg-court-title">
+        <div class="dg-court-inner">
+          <figure class="dg-court-art">
+            <img src="images/design-guidelines/middlebrook-bungalow-cottage-rendering.jpg" width="2000" height="790" alt="Rendering of a small brick bungalow cottage with twin dormers, a white columned porch, and a picket fence" loading="lazy" decoding="async">
+          </figure>
+          <div class="dg-court-copy">
+            <h2 class="serif" id="dg-court-title">Room for the missing middle</h2>
+            <p class="body-copy">A neighborhood is richer when it offers more than one size of home. Between the single-family house and the apartment sits what planners call missing middle housing: townhomes, cottages, and bungalow courts that open more price points and let people stay in the community as their needs change.</p>
+            <p class="body-copy">A bungalow court is a group of small, detached homes, one to one and a half stories tall, arranged around a shared courtyard instead of private backyards. Homes run about 600 to 700 square feet, or 1,000 to 1,200 for more bedrooms. They offer more privacy than an attached home, and the courtyard becomes a shared lawn, a place for a garden, or a spot to gather.</p>
+            <p class="dg-court-note">Middlebrook’s <a href="cottages.html" class="inline-link">Cottages</a> and <a href="townhomes.html" class="inline-link">Townhomes</a> are part of this mix today, and future neighborhoods add more.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Porch dimensions from the guidelines and The Front Porch page -->
+      <section class="dg-porch" aria-labelledby="dg-porch-title">
+        <div class="dg-porch-inner">
+          <figure class="dg-porch-sketch" data-lightbox-group>
+            <img src="images/design-guidelines/middlebrook-front-porch-elevation-sketch.jpg" width="2000" height="1294" alt="Hand-drawn elevation of a farmhouse with a deep screened front porch" loading="lazy" decoding="async">
+          </figure>
+          <div class="dg-porch-copy">
+            <h2 class="serif" id="dg-porch-title">The front porch, an American icon</h2>
+            <p class="body-copy">Every home has a front porch or a front entry courtyard. It is where neighbors stop to talk, and where the house meets the street.</p>
+            <dl class="dg-porch-specs">
+              <div><dt class="accent">8 ft</dt><dd>Minimum depth, required on every porch</dd></div>
+              <div><dt class="accent">10 ft</dt><dd>Preferred depth, room for chairs and a table</dd></div>
+              <div><dt class="accent">12 ft</dt><dd>An outdoor room</dd></div>
+            </dl>
+            <p class="dg-porch-tip">Keep it under 30 inches above the yard so you can skip the railing, and light it warm, under 3000K.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Garage, driveway, detail, and landscape rules from the design guideline summary -->
+      <section class="dg-street" aria-labelledby="dg-street-title">
+        <div class="dg-street-inner">
+          <div class="dg-street-copy">
+            <h2 class="serif" id="dg-street-title">How a home meets the street</h2>
+            <p class="dg-street-line"><strong>Garages step back.</strong> A front-facing garage sits at least 5 feet behind the front of the house, with two bays at most. A third bay steps back 15 feet. Side-entry garages are encouraged, and some lots require them.</p>
+            <p class="dg-street-line"><strong>Driveways stay narrow.</strong> No more than 14 feet wide at the curb, widening only near the garage. A sidewalk connects the front walk to the porch.</p>
+            <p class="dg-street-line"><strong>Four sides, one house.</strong> Materials don’t change at an outside corner, trim is at least 4 inches wide, and window grids match across the house. Simple roof forms, never one of everything.</p>
+            <p class="dg-street-line"><strong>Trees on every lot.</strong> At least two shade trees, one in the front yard, plus one smaller ornamental tree. The street tree counts toward the two.</p>
+          </div>
+          <figure class="dg-street-sketch" data-lightbox-group>
+            <img src="images/design-guidelines/middlebrook-farmhouse-elevation-detail-sketch.jpg" width="1632" height="1035" alt="Hand-drawn front elevation of a two-story farmhouse with notes on materials and details" loading="lazy" decoding="async">
+            <figcaption>From the architect’s sketchbook</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Review process from the architect's Town Architect page (express.adobe.com/page/7S9mCBC8HSeuI) -->
+      <section class="dg-review" aria-labelledby="dg-review-title">
+        <div class="dg-review-inner">
+          <div class="dg-review-head">
+            <h2 class="serif" id="dg-review-title">Working with the Town Architect</h2>
+            <p class="body-copy">The Town Architect knows the guidelines best and reviews every single-family home in Great Western Crossing, together with the Architectural Review Board. The goal isn’t to slow a build down. It’s to make sure each home adds to a street that will be treasured for generations.</p>
+          </div>
+          <ol class="dg-review-stages">
+            <li>
+              <figure data-lightbox-group>
+                <img src="images/design-guidelines/middlebrook-town-architect-schematic-elevation-study.jpg" width="2000" height="1050" alt="A hand-drawn schematic front elevation study of a brick and stone house, with notes on materials" loading="lazy" decoding="async">
+                <img src="images/design-guidelines/middlebrook-town-architect-schematic-floor-plan-sketch.jpg" width="2000" height="1928" alt="A hand-drawn schematic first floor plan" loading="lazy" decoding="async" hidden>
+              </figure>
+              <div>
+                <p class="dg-review-stage">First, schematic design</p>
+                <h3 class="serif">Share the idea early</h3>
+                <p>Submit concept sketches while the design is still loose, along with any inspiration or precedent photos. A call or Zoom with the Town Architect can talk through questions and anything particular to your lot.</p>
+              </div>
+            </li>
+            <li>
+              <figure data-lightbox-group>
+                <img src="images/design-guidelines/middlebrook-town-architect-construction-drawing-elevations.jpg" width="2000" height="1510" alt="Construction drawing sheet with the front and side elevations of a farmhouse, fully annotated" loading="lazy" decoding="async">
+              </figure>
+              <div>
+                <p class="dg-review-stage">Next, construction drawings</p>
+                <h3 class="serif">Refine the plans</h3>
+                <p>Once the schematic design is approved, submit the final drawings. The Town Architect and the Architectural Review Board approve them or ask for changes to meet the guidelines.</p>
+              </div>
+            </li>
+            <li>
+              <figure data-lightbox-group>
+                <img src="images/design-guidelines/middlebrook-town-architect-material-color-board.jpg" width="2000" height="1184" alt="A material and color board for a stone and shingle house, with roofing, stone, and paint samples" loading="lazy" decoding="async">
+              </figure>
+              <div>
+                <p class="dg-review-stage">Last, final approvals</p>
+                <h3 class="serif">Colors, lights, and landscape</h3>
+                <p>Exterior colors, exterior light fixtures, and the landscape plan are approved last. The smallest details, coordinated with the homes next door, are what make a street feel varied and whole.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- The five steps from the Design Guideline Summary -->
+      <section class="dg-steps texture" aria-labelledby="dg-steps-title">
+        <div class="dg-steps-inner">
+          <div class="dg-steps-head">
+            <h2 class="serif" id="dg-steps-title">Building in Great Western Crossing</h2>
+            <p>Bring your own builder. Before plans are drawn, your builder and designer should talk with the Town Architect and the Architectural Review Board, who review every home.</p>
+            <a href="lots.html" class="underline-link">See available lots</a>
+          </div>
+          <div class="dg-steps-list">
+            <details open>
+              <summary><span class="accent">Step 1</span> Choose a lot</summary>
+              <p>Start with the lot regulating plan (page 12 of the guidelines), and confirm your lot against the recorded plat. Most lots follow the standard requirements; some require a side-entry garage, an entry court, or a particular style.</p>
+            </details>
+            <details>
+              <summary><span class="accent">Step 2</span> Review the lot and massing diagrams</summary>
+              <p>Check the front, side, and rear setbacks for your lot, and place the porch within the build-to zone on pages 13 to 15. Corner lots face two streets and need extra care; a wrapping porch is encouraged.</p>
+            </details>
+            <details>
+              <summary><span class="accent">Step 3</span> Choose an architectural style</summary>
+              <p>Pick one of the four styles (pages 17 to 20), and design a modern but authentic take on it.</p>
+            </details>
+            <details>
+              <summary><span class="accent">Step 4</span> Work out forms and patterns</summary>
+              <p>Keep roof forms simple and true to the style. Masonry openings get real lintels and arches, dormer windows are trimmed and fitted, and horizontal transom windows are avoided on traditional styles.</p>
+            </details>
+            <details>
+              <summary><span class="accent">Step 5</span> Plan the landscape</summary>
+              <p>Coordinate street trees with the developer (page 34), plant evergreens along the foundation, and see the plant lists on pages 31 and 32 and fencing on page 33.</p>
+            </details>
+            <ul class="sf-docs dg-docs">
+              <li><a href="https://middlebrook-farm.s3.amazonaws.com/14249-attachment-great-western-crossing-design-guidelines-2022-09-16-152502-4439.pdf" target="_blank" rel="noopener">Design guidelines, full document</a></li>
+              <li><a href="https://middlebrook-farm.s3.amazonaws.com/14249-attachment-great-western-crossing-design-guidelines-summary.pdf" target="_blank" rel="noopener">Design guideline summary</a></li>
+              <li><a href="https://middlebrook-farm.s3.amazonaws.com/14249-attachment-great-western-crossing-covenants-2023-07-14-134031-2048.pdf" target="_blank" rel="noopener">Covenants</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ground Breaker Homes' Homestead Series, from groundbreakerhomes.com/floor-plans (October 2026) -->
+      <section class="dg-plans" aria-labelledby="dg-plans-title">
+        <div class="dg-plans-inner">
+          <div class="dg-plans-head">
+            <h2 class="serif" id="dg-plans-title">Start from a plan</h2>
+            <p class="body-copy">You don’t have to start from a blank page. <a href="https://www.groundbreakerhomes.com" class="inline-link" target="_blank" rel="noopener">Ground Breaker Homes</a> developed the Homestead Series specifically for Great Western Crossing: preset floor plans already designed to meet these guidelines, from villas to four-bedroom farmhouses.</p>
+            <span class="meadow-links dg-links">
+              <a href="https://groundbreakerhomes.com/floor-plans/#homestead" class="underline-link" target="_blank" rel="noopener">See the Homestead Series</a>
+              <a href="https://groundbreakerhomes.com/floor-plans/" class="underline-link" target="_blank" rel="noopener">All Ground Breaker floor plans</a>
+            </span>
+          </div>
+          <ul class="dg-plans-list" data-gallery tabindex="0" aria-label="Homestead Series plans, scroll sideways for more">
+            <li><a href="https://groundbreakerhomes.com/liberty-ranch/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-liberty-ranch.jpg" alt="Rendering of the Liberty Ranch" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">Liberty Ranch</span><span class="dg-plan-specs">1,600 SF · 2 bed · 2 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-trailhead/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-trailhead.jpg" alt="Rendering of The Trailhead" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The Trailhead</span><span class="dg-plan-specs">1,629 SF · 3 bed · 2.5 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-warren-cottage/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-warren-cottage.jpg" alt="Rendering of The Warren Cottage" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The Warren Cottage</span><span class="dg-plan-specs">1,689 SF · 3 bed · 2 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-oxfordshire/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-oxfordshire.jpg" alt="Rendering of The Oxfordshire" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The Oxfordshire</span><span class="dg-plan-specs">1,727 SF · 2 bed · 2 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-scott/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-scott.jpg" alt="Rendering of The Scott" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The Scott</span><span class="dg-plan-specs">1,811 SF · 3 bed · 2 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/waterbury/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-waterbury.jpg" alt="Rendering of the Waterbury" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">Waterbury</span><span class="dg-plan-specs">1,839 SF · 2 bed · 2 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-white-oak-2/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-white-oak.jpg" alt="Rendering of The White Oak" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The White Oak</span><span class="dg-plan-specs">1,895 SF · 3 bed · 2.5 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/roseman-ranch/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-roseman-ranch.jpg" alt="Rendering of the Roseman Ranch" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">Roseman Ranch</span><span class="dg-plan-specs">1,896 SF · 3 bed · 2 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-hampton-house/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-hampton-house.jpg" alt="Rendering of The Hampton House" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The Hampton House</span><span class="dg-plan-specs">2,174 SF · 4 bed · 2.5 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/oaklyn/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-oaklyn.jpg" alt="Rendering of the Oaklyn" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">Oaklyn</span><span class="dg-plan-specs">2,446 SF · 3 bed · 2.5 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/callison-cottage/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-callison-cottage.jpg" alt="Rendering of the Callison Cottage" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">Callison Cottage</span><span class="dg-plan-specs">2,452 SF · 4 bed · 2.5 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-franklin-farmhouse/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-franklin-farmhouse.jpg" alt="Rendering of The Franklin Farmhouse" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The Franklin Farmhouse</span><span class="dg-plan-specs">2,475 SF · 3 bed · 2.5 bath</span></a></li>
+            <li><a href="https://groundbreakerhomes.com/the-linn-cottage/" target="_blank" rel="noopener"><span class="dg-plan-img"><img src="images/design-guidelines/plans/middlebrook-homestead-series-the-linn-cottage.jpg" alt="Rendering of The Linn Cottage" loading="lazy" decoding="async"></span><span class="serif dg-plan-name">The Linn Cottage</span><span class="dg-plan-specs">2,676 SF · 3 bed · 3 bath</span></a></li>
+          </ul>
+          <div class="th-gallery-controls dg-plans-controls">            <button type="button" class="th-gallery-arrow" data-gallery-prev aria-label="Previous plans"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button>            <button type="button" class="th-gallery-arrow" data-gallery-next aria-label="More plans"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>          </div>
+          <p class="dg-plans-note">The series also includes the <a href="villas.html" class="inline-link">Parkland A, Parkland B, and Brierwood villas</a>. Every home still goes through design review.</p>
+        </div>
+      </section>
+
+      <section class="request-info texture" id="request-info" aria-label="Request more information">
+        <img src="images/brand/sprigs/sprig-13.svg" alt="" class="sprig sprig-center" aria-hidden="true">
+        <h2 class="serif">Planning a home in Middlebrook?</h2>
+        <p>Tell us about your plans and we will connect you with the next step, from choosing a lot to meeting with the Design Review Board.</p>
+        <a href="#" class="btn-outline request-info-cta">Request Info</a>
+      </section>
+    </main>
+    <footer class="site-footer" id="stay">
+      <div class="footer-newsletter">
+        <div class="footer-newsletter-label">
+          <!-- Each page uses a different chicken: images/brand/chickens/chicken-01 to chicken-10 -->
+          <img src="images/brand/chickens/chicken-07.svg" alt="" class="footer-chicken" aria-hidden="true">
+          <p class="serif">Be the first to hear about new lineups, events, and homes at Middlebrook.</p>
+        </div>
+
+        <div class="footer-actions">
+          <form class="footer-form" id="newsletter" action="#" method="post">
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input id="newsletter-email" type="email" name="email" placeholder="Email" required>
+            <button type="submit" class="btn-dark">Submit</button>
+          </form>
+
+          <!-- Replace each "#" with the full profile address, e.g. https://www.instagram.com/yourhandle -->
+          <ul class="footer-social" aria-label="Middlebrook on social media">
+            <li>
+              <a href="#" target="_blank" rel="noopener" aria-label="Middlebrook on Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-fill" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10.5H7.8v3h2.6V21h3.1Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener" aria-label="Middlebrook on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-fill" cx="17.2" cy="6.8" r="1.1"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4 class="serif">About</h4>
+          <a href="vision.html">Vision</a>
+          <a href="#">Blog</a>
+          <a href="press.html">Press</a>
+          <a href="#">Our Team</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Live &amp; Build</h4>
+          <a href="homes-for-sale.html">Homes for Sale</a>
+          <a href="single-family.html">Single-Family Homes</a>
+          <a href="villas.html">The Villas</a>
+          <a href="cottages.html">The Cottages</a>
+          <a href="townhomes.html">The Townhomes</a>
+          <a href="#">The Lofts</a>
+          <a href="lots.html">Lots</a>
+          <a href="floor-plans.html">Floor Plans</a>
+          <a href="design-guidelines.html">Design Guidelines &amp; Philosophy</a>
+          <a href="geothermal.html">Geothermal</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Visit</h4>
+          <a href="town-garden.html">Town Garden</a>
+          <a href="#">Business Directory</a>
+          <a href="#">Parks &amp; Natural Spaces</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Events</h4>
+          <a href="#">Event Calendar</a>
+          <a href="fridays-at-the-farm.html">Fridays at the Farm</a>
+          <a href="smoke-and-sip-bbq-festival.html">Smoke &amp; Sip BBQ Festival</a>
+          <a href="farm-to-table-dinners.html">Farm to Table Dinners</a>
+          <a href="#">Porchfest</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Private Rentals</h4>
+          <a href="farmhouse-and-farm-grounds.html">Farmhouse &amp; Farm Grounds</a>
+          <a href="mercantile-private-rental.html">The Merc Private Rental</a>
+          <a href="private-photography.html">Private Photography</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="serif">Invest</h4>
+          <a href="#">Town Center Leasing</a>
+          <a href="#">LiveWork Townhomes</a>
+          <a href="#">Market Hall</a>
+          <a href="#">Middlebrook West Commercial</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-address">4300 Cumming Ave, Cumming, Iowa 50061 · 515.309.0705
+          <!-- Drive times come from drive-times.js -->
+          <span class="footer-drive" data-drive-line></span>
+        </span>
+        <span>&copy; <span id="year"></span> Middlebrook Agrihood</span>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="testimonials.js"></script>
+  <script src="drive-times.js"></script>
+  <script src="listings.js"></script>
+
+
+  <script src="map.js"></script>
+  <script src="search.js"></script>
+  <script src="script.js"></script>
+</body>

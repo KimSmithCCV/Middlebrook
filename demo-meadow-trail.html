@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meadow Trail Demo | Middlebrook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/tcg6hwg.css">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Demo only. If approved, this moves into style.css and replaces .park-intro on the Meadow page. */
+
+.trail { padding: 120px var(--gutter) 140px; }
+
+.trail-inner {
+  position: relative;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.trail-intro {
+  max-width: 640px;
+  margin: 0 0 88px;
+}
+
+.trail-intro h2 {
+  margin: 0 0 22px;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--forest);
+}
+
+.trail-intro h2 em { color: var(--mustard-deep); }
+
+/* The path: a pale mowed swath with a dashed center line, drawn through the markers by script */
+.trail-path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.trail-swath { fill: none; stroke: #ece6d6; stroke-width: 22; stroke-linecap: round; }
+.trail-center { fill: none; stroke: var(--sage); stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 1 8; }
+.trail-reveal { fill: none; stroke: #fff; stroke-width: 40; stroke-linecap: round; }
+
+.trail-stops {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Each stop: text on one side, the marker in the middle lane, a photo (or nothing) on the other */
+.trail-stop {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px minmax(0, 1fr);
+  align-items: start;
+  margin-bottom: 104px;
+}
+
+.trail-stop:last-child { margin-bottom: 0; }
+
+.trail-stop-text { grid-column: 1; grid-row: 1; justify-self: end; max-width: 400px; padding-top: 2px; }
+.trail-stop-marker { grid-column: 2; grid-row: 1; justify-self: start; margin-left: 40px; }
+.trail-stop-photo { grid-column: 3; grid-row: 1; }
+
+.trail-stop--right .trail-stop-text { grid-column: 3; justify-self: start; }
+.trail-stop--right .trail-stop-marker { justify-self: end; margin: 0 40px 0 0; }
+.trail-stop--right .trail-stop-photo { grid-column: 1; justify-self: end; }
+
+.trail-stop-marker {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  margin-top: 12px;
+  border: 2px solid var(--mustard-deep);
+  border-radius: 50%;
+  background: #fff;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+
+.trail-stop.is-reached .trail-stop-marker { background: var(--mustard-deep); transform: scale(1.15); }
+
+.trail-stop--end .trail-stop-marker,
+.trail-stop--start .trail-stop-marker { width: 18px; height: 18px; margin-top: 10px; border-color: var(--forest); }
+.trail-stop--end.is-reached .trail-stop-marker,
+.trail-stop--start.is-reached .trail-stop-marker { background: var(--forest); }
+
+.trail-stop-text,
+.trail-stop-photo { opacity: 0.25; transform: translateY(14px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.trail-stop.is-reached .trail-stop-text,
+.trail-stop.is-reached .trail-stop-photo { opacity: 1; transform: none; }
+
+.trail-distance {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-accent);
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mustard-deep);
+}
+
+.trail-stop h3 {
+  margin: 0 0 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 2.2vw, 30px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--forest);
+}
+
+.trail-stop .body-copy { margin: 0; }
+.trail-stop .season-stamp { margin-bottom: 18px; }
+.trail-stop .underline-link { margin-top: 16px; font-size: 14px; }
+
+.trail-stop-photo { margin: 0; width: 100%; max-width: 440px; }
+.trail-stop-photo img { width: 100%; height: auto; }
+.trail-stop-photo--tall { max-width: 360px; margin-top: -40px; }
+.trail-stop-photo--low { margin-top: 56px; }
+
+.trail-total {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 26px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--forest);
+}
+
+.trail-total .season-stamp { margin: 0; }
+
+@media (max-width: 820px) {
+  .trail { padding-top: 80px; padding-bottom: 96px; }
+  .trail-intro { margin-bottom: 56px; }
+  .trail-stop,
+  .trail-stop--right { grid-template-columns: 44px minmax(0, 1fr); row-gap: 22px; margin-bottom: 72px; }
+  .trail-stop-marker,
+  .trail-stop--right .trail-stop-marker { grid-column: 1; grid-row: 1; justify-self: start; margin: 10px 0 0 8px; }
+  .trail-stop-text,
+  .trail-stop--right .trail-stop-text { grid-column: 2; grid-row: 1; justify-self: start; }
+  .trail-stop-photo,
+  .trail-stop--right .trail-stop-photo { grid-column: 2; grid-row: 2; justify-self: start; margin-top: 0; }
+  .trail-swath { stroke-width: 16; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trail-stop-text, .trail-stop-photo, .trail-stop-marker { transition: none; }
+}
+
+.demo-note {
+  padding: 14px var(--gutter);
+  background: var(--sand);
+  font-size: 13px;
+  color: var(--text-soft);
+  text-align: center;
+}
+.demo-note a { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<p class="demo-note">Demo of the Meadow intro section. Compare with the <a href="middlebrook-meadow.html">current Meadow page</a>. Highlighted text needs real facts.</p>
+
+<section class="trail" aria-labelledby="trail-title">
+  <div class="trail-inner" data-trail>
+    <svg class="trail-path" aria-hidden="true" focusable="false">
+      <defs>
+        <mask id="trail-mask" maskUnits="userSpaceOnUse">
+          <path class="trail-reveal" data-trail-reveal />
+        </mask>
+      </defs>
+      <g mask="url(#trail-mask)">
+        <path class="trail-swath" data-trail-line />
+        <path class="trail-center" data-trail-line />
+      </g>
+    </svg>
+
+    <div class="trail-intro">
+      <h2 class="serif" id="trail-title">More than 50 acres of Middlebrook is <em>left to the prairie.</em></h2>
+      <p class="body-copy">Rolling hills, native grasses, a creek, and a pond, with mowed trails running through all of it. The Meadow is open sunup to sundown, and the walk below starts at Wilson’s Trailhead.</p>
+    </div>
+
+    <ol class="trail-stops">
+      <li class="trail-stop trail-stop--start">
+        <div class="trail-stop-text">
+          <span class="season-stamp">Start here</span>
+          <h3>Wilson’s Trailhead</h3>
+          <p class="body-copy">Beside Wilson’s Orchard, off 15th Avenue south of Cumming Avenue. The trail map is posted at the sign.</p>
+        </div>
+        <span class="trail-stop-marker" data-trail-marker></span>
+        <figure class="trail-stop-photo trail-stop-photo--tall">
+          <img src="images/middlebrook-meadow-trailhead-map.webp" width="1000" height="1500" alt="Two children reading the Middlebrook Meadow trailhead map" loading="lazy" decoding="async">
+        </figure>
+      </li>
+
+      <li class="trail-stop trail-stop--right">
+        <span class="trail-stop-marker" data-trail-marker></span>
+        <div class="trail-stop-text">
+          <h3>Farm animals grazing</h3>
+          <p class="body-copy">Wilson’s Orchard keeps <span class="is-tbd">[which animals]</span> on the hillside near the trailhead as part of their polyculture farm. Say hello from the trail.</p>
+        </div>
+      </li>
+
+      <li class="trail-stop">
+        <div class="trail-stop-text">
+          <h3>Native grasses and wildflowers</h3>
+          <p class="body-copy"><span class="is-tbd">[Two or three species by name]</span>, all native to Iowa. Green in spring, gold by late summer.</p>
+        </div>
+        <span class="trail-stop-marker" data-trail-marker></span>
+        <figure class="trail-stop-photo trail-stop-photo--low">
+          <img src="images/middlebrook-meadow-native-grasses.webp" width="1000" height="667" alt="Native grasses and wildflowers in Middlebrook Meadow" loading="lazy" decoding="async">
+        </figure>
+      </li>
+
+      <li class="trail-stop trail-stop--right">
+        <figure class="trail-stop-photo">
+          <img src="images/meadow/middlebrook-meadow-trail-pond.webp" width="2000" height="1333" alt="The Meadow pond framed by native grasses and wildflowers, with Wilson’s Orchard on the hill beyond" loading="lazy" decoding="async">
+        </figure>
+        <span class="trail-stop-marker" data-trail-marker></span>
+        <div class="trail-stop-text">
+          <h3>The pond</h3>
+          <p class="body-copy">Stop here and watch for <span class="is-tbd">[what people actually see: herons, frogs, ducks?]</span>.</p>
+        </div>
+      </li>
+
+      <li class="trail-stop trail-stop--end">
+        <div class="trail-stop-text">
+          <span class="trail-distance">0.35 mi from Wilson’s</span>
+          <h3>The middle of the Meadow</h3>
+          <p class="body-copy">All three trails meet here. Walk back the way you came, or keep going to the Great Western Trailhead or the Coolidge Trailhead.</p>
+          <p class="trail-total"><span class="season-stamp">1.5 miles</span> of trail in all</p>
+          <a href="middlebrook-meadow.html" class="underline-link">View the Meadow trail map</a>
+        </div>
+        <span class="trail-stop-marker" data-trail-marker></span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-trail]');
+  if (!root) return;
+  var svg = root.querySelector('svg');
+  var lines = root.querySelectorAll('[data-trail-line]');
+  var reveal = root.querySelector('[data-trail-reveal]');
+  var markers = Array.prototype.slice.call(root.querySelectorAll('[data-trail-marker]'));
+  var stops = markers.map(function (m) { return m.closest('.trail-stop'); });
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var total = 0;
+  var markerLengths = [];
+
+  // Curve from marker to marker; each leg bows out sideways so it reads as a mowed path, not a zigzag
+  function build() {
+    var box = root.getBoundingClientRect();
+    var narrow = window.innerWidth <= 820;
+    var pts = markers.map(function (m) {
+      var r = m.getBoundingClientRect();
+      return { x: r.left + r.width / 2 - box.left, y: r.top + r.height / 2 - box.top };
+    });
+    var d = 'M ' + pts[0].x + ' ' + (pts[0].y - (narrow ? 40 : 90));
+    d += ' C ' + (pts[0].x + 30) + ' ' + (pts[0].y - 50) + ', ' + pts[0].x + ' ' + (pts[0].y - 20) + ', ' + pts[0].x + ' ' + pts[0].y;
+    var measure = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    svg.appendChild(measure);
+    measure.setAttribute('d', d);
+    markerLengths = [measure.getTotalLength()];
+    for (var i = 1; i < pts.length; i++) {
+      var a = pts[i - 1], b = pts[i], dy = b.y - a.y;
+      var bow = narrow ? (i % 2 ? 22 : -14) : 0;
+      d += ' C ' + (a.x + bow) + ' ' + (a.y + dy * 0.55) + ', ' + (b.x + bow) + ' ' + (b.y - dy * 0.55) + ', ' + b.x + ' ' + b.y;
+      measure.setAttribute('d', d);
+      markerLengths.push(measure.getTotalLength());
+    }
+    var last = pts[pts.length - 1];
+    d += ' c 0 40, ' + (narrow ? 10 : 30) + ' 70, ' + (narrow ? 0 : 60) + ' 120';
+    measure.setAttribute('d', d);
+    total = measure.getTotalLength();
+    svg.removeChild(measure);
+    lines.forEach(function (l) { l.setAttribute('d', d); });
+    reveal.setAttribute('d', d);
+    reveal.style.strokeDasharray = total + ' ' + total;
+    update();
+  }
+
+  // Draw the path down to roughly two-thirds of the way down the screen
+  function update() {
+    var drawn = total;
+    if (!reduceMotion) {
+      var box = root.getBoundingClientRect();
+      var target = window.innerHeight * 0.68 - box.top;
+      drawn = 0;
+      for (var i = 0; i < markerLengths.length; i++) {
+        var y = markers[i].getBoundingClientRect().top - box.top;
+        var prevY = i ? markers[i - 1].getBoundingClientRect().top - box.top : y - 90;
+        var prevL = i ? markerLengths[i - 1] : 0;
+        if (target >= y) { drawn = markerLengths[i]; continue; }
+        if (target > prevY) drawn = prevL + (markerLengths[i] - prevL) * (target - prevY) / (y - prevY);
+        break;
+      }
+      if (target >= box.height) drawn = total;
+    }
+    reveal.style.strokeDashoffset = total - drawn;
+    stops.forEach(function (s, i) { s.classList.toggle('is-reached', drawn >= markerLengths[i] - 1); });
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { update(); ticking = false; });
+  }, { passive: true });
+  // Rebuild whenever the section changes size (photos and fonts loading, window resizing)
+  if ('ResizeObserver' in window) new ResizeObserver(function () { build(); }).observe(root);
+  else window.addEventListener('resize', build);
+  if (document.fonts) document.fonts.ready.then(build);
+  window.addEventListener('load', build);
+  build();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Original video files: too large for GitHub (100 MB per file) and not used by the site.
+# The site plays the compressed copies in images/farm-to-table/ and images/home/.
+images/video/
+images/home/FRIDAY AT FARM EDIT 4.mp4
+images/home/Resident_Testimonial (1080p).mp4
+
+# Office lock files and system files
+~$*
+Thumbs.db
+desktop.ini
+.DS_Store
