@@ -10,11 +10,3 @@ wrangler.jsonc
 *.ps1
 ~$*
 images/video/
-
-# Original full-size renderings (about 28 MB each, over Cloudflare's 25 MB per-file limit).
-# The site uses the web copies in images/town-center/renderings/ instead.
-images/vision/View 1 Grpund Level_Final.jpg
-images/vision/View 2 Ground Level_Final.jpg
-images/vision/View 3 Aerial_Final.jpg
-images/vision/entry view.jpg
-images/vision/entry view 2.jpg
