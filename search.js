@@ -11,6 +11,14 @@
 
 window.MIDDLEBROOK_SEARCH_PAGES = [
   'index.html',
+  'middlebrook-town-center.html',
+  'wilsons-orchard-and-farm.html',
+  'the-merc.html',
+  'the-farmstand.html',
+  'cups-and-cones.html',
+  'bloom-play-co.html',
+  'freebird-and-co.html',
+  'reese-marie-salon.html',
   'homes-for-sale.html',
   'geothermal.html',
   'vision.html',
@@ -33,7 +41,14 @@ window.MIDDLEBROOK_SEARCH_PAGES = [
   'private-photography.html',
   'mercantile-private-rental.html',
   'middlebrook-vacation-rental.html',
-  'farm-to-table-dinners.html'
+  'farm-to-table-dinners.html',
+  'market-hall.html',
+  'live-work-townhomes.html',
+  'middlebrook-west-commercial.html',
+  'vision-board.html',
+  'middlebrook-lofts.html',
+  'town-center.html',
+  'porchfest.html'
 ];
 
 (() => {

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const rows = Array.from(rowsList.children);
   const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
   const money = (n) => (n >= 1000000 ? `$${(n / 1000000).toFixed(n % 1000000 ? 2 : 0)}M` : `$${Math.round(n / 1000)}K`);
-  const typeNames = { 'single-family': 'Single-family', villas: 'Villas', townhomes: 'Townhomes', cottages: 'Cottages', lots: 'Lots' };
+  const typeNames = { 'single-family': 'Single-family', villas: 'Villas', townhomes: 'Townhomes', cottages: 'Cottages', lots: 'Lots', 'live-work': 'Live-work townhomes' };
   const state = { q: '', min: 0, max: Infinity, types: new Set(), statuses: new Set(), beds: 0, baths: 0, sort: 'featured' };
 
   // Build the checkbox lists from the homes actually listed, with a count for each

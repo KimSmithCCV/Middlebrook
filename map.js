@@ -7,7 +7,7 @@
   How to add a pin:
   - Copy one of the { ... } blocks below, paste it after the last one, and keep the commas between blocks.
   - "top" and "left" place the pin as a percent of the map image (0% is the top or left edge).
-  - A pin with only top, left, and name shows as a plain dot.
+  - A pin with only top, left, and name shows as a plain dot. Add "label: true" to show the name as text instead, with no dot.
   - Add "details" to make the pin open a card with photos, a description, a walk time, and a link.
     Inside details, "tag", "link", and "video" are optional; delete any you do not need.
   - Photos for each place go in images/Interactive-Map/<Place name>/.
@@ -17,11 +17,160 @@
 
 window.MIDDLEBROOK_MAP = {
   image: 'images/home/middlebrook-aerial-map.webp',
+  // The Great Western Bike Trail, drawn over the map and lit up when its pin (trail: true) is hovered or tapped.
+  // Points are "left,top" in percent, like the pins, traced from the client's markup along the tree line (October 28, 2026; upper stretch moved onto the tree belt, the run up to Main Street straightened along the edge of the old town to match the client's sharpie line, the stretch from the barn to the lower left traced onto the path drawn in the image, November 2, 2026).
+  trail: '99.6,44.6 86,44.9 81,45.3 75,46.1 71.9,47.2 69.2,48.9 67.2,49.9 64.3,52.1 61.6,54.9 59.45,57.7 57.3,60.3 55.1,63 54.4,65.2 53.7,67.9 53.4,69.8 53,73 52.65,75.4 52.2,77.2 51,80.2 49.7,81.9 47.6,84 45.9,85.5 44.3,86.4 41.6,87.7 39.3,88.5 37.7,89.1 32.9,90.3 30,91 24,92.1 21.2,93.1 18.1,94 15.4,95.2 12.7,97 8.6,100',
   pins: [
-    { top: 72, left: 18, name: '[Place name]' },
-    { top: 56, left: 30, name: '[Place name]' },
-    { top: 52, left: 44, name: '[Place name]' },
-    { top: 43, left: 60, name: '[Place name]' },
+    // Historic Cumming: text on the map, no dot or card (client, November 2, 2026)
+    { top: 61, left: 59.3, name: 'Historic Cumming', label: true },
+    // Future neighborhoods: text on the map, no dot or card (client, October 28, 2026)
+    { top: 73.1, left: 38.5, name: 'Future neighborhood', label: true },
+    { top: 79.7, left: 14.6, name: 'Future neighborhood', label: true },
+    { top: 78.1, left: 75.8, name: 'Future neighborhood', label: true },
+    // Positions placed by the client on October 28, 2026 (marked-up screenshot). Walk times are left off until measured.
+    {
+      top: 85.6, left: 27,
+      name: 'Middlebrook Meadow',
+      details: {
+        tag: '50+ acres',
+        photos: [
+          { src: 'images/middlebrook-meadow-trailhead-map.webp', alt: 'Two children reading the Middlebrook Meadow trailhead map' },
+          { src: 'images/middlebrook-meadow-trail-children.webp', alt: 'A family walking a mowed trail through the Meadow' },
+          { src: 'images/middlebrook-meadow-native-grasses.webp', alt: 'Native grasses in Middlebrook Meadow' }
+        ],
+        description: 'Fifty-plus acres of native grasses, wildflowers, and quiet trails, with three trailheads.',
+        walkLabel: 'Town Center Walkability',
+        walkTime: '5 minutes',
+        link: { text: 'Middlebrook Meadow', href: 'middlebrook-meadow.html' }
+      }
+    },
+    {
+      top: 72, left: 18,
+      name: 'Wilson’s Orchard & Farm',
+      details: {
+        photos: [
+          { src: 'images/middlebrook-wilsons-ciderhouse-exterior.webp', alt: 'The Ciderhouse at Wilson’s Orchard & Farm' },
+          { src: 'images/middlebrook-wilsons-orchard-pond-barn.webp', alt: 'The pond and barn at Wilson’s Orchard' },
+          { src: 'images/middlebrook-wilsons-orchard-tulip-rows.webp', alt: 'Rows of tulips at Wilson’s Orchard' }
+        ],
+        description: 'Pick-your-own fruit, a farm market and bakery, and wood-fired pizza and hard cider at the Ciderhouse.',
+        walkLabel: 'Town Center Walkability',
+        walkTime: '10 minutes',
+        link: { text: 'Wilson’s Orchard & Farm', href: 'wilsons-orchard-and-farm.html' }
+      }
+    },
+    {
+      top: 62, left: 29.5,
+      name: 'Middlebrook West Commercial',
+      details: {
+        tag: 'for sale',
+        photos: [
+          { src: 'images/middlebrook-west-commercial/middlebrook-west-commercial-aerial-caseys-fast-and-fresh.webp', alt: 'Aerial of Highway G14 and 15th Avenue with Casey’s on the corner and Hy-Vee Fast & Fresh across the road' },
+          { src: 'images/middlebrook-west-commercial/middlebrook-west-commercial-lot-2-aerial-corner.webp', alt: 'Aerial view of Lot 2 at Highway G14 and 15th Avenue' },
+          { src: 'images/middlebrook-west-commercial/middlebrook-west-commercial-aerial-caseys-hy-vee.webp', alt: 'Aerial view of the commercial site beside Casey’s, across from the Hy-Vee Distribution Center' }
+        ],
+        description: 'Casey’s, Starbucks, and Hy-Vee Fast & Fresh are already open at Highway G14 and 15th Avenue, just east of Interstate 35. One lot on this busy corner is still available: bring your own plan and build on your own timeline.',
+        link: { text: 'Middlebrook West Commercial', href: 'middlebrook-west-commercial.html' }
+      }
+    },
+    {
+      top: 66.5, left: 51.4,
+      name: 'The Cottages',
+      details: {
+        tag: 'geothermal',
+        photos: [
+          { src: 'images/cottages/middlebrook-cottages-street-rendering.jpg', alt: 'Rendering of the Cottages along a tree-lined street' },
+          { src: 'images/cottages/middlebrook-cottage-two-story-exterior-rendering.jpg', alt: 'Rendering of a two-story cottage' },
+          { src: 'images/cottages/middlebrook-cottage-one-story-kitchen-rendering.jpg', alt: 'Rendering of a one-story cottage kitchen' }
+        ],
+        description: 'Modern one- and two-story cottages with a private fenced patio yard, geothermal heating and cooling, and lawn care and snow removal covered by the HOA.',
+        walkLabel: 'Town Center Walkability',
+        walkTime: '2 minutes',
+        link: { text: 'The Cottages', href: 'cottages.html' }
+      }
+    },
+    {
+      top: 79.5, left: 51.3, trail: true,
+      name: 'Great Western Bike Trail',
+      details: {
+        photos: [
+          { src: 'images/historic-cumming/middlebrook-great-western-bike-trail-summer.webp', alt: 'The Great Western Trail in summer, lined with trees' },
+          { src: 'images/historic-cumming/middlebrook-great-western-bike-trail-path.webp', alt: 'The paved Great Western Trail curving through Middlebrook' }
+        ],
+        description: 'A paved trail on the old Chicago Great Western rail line, running right through the center of Middlebrook and on to Des Moines.',
+        link: { text: 'Great Western Bike Trail', href: 'great-western-trail.html' }
+      }
+    },
+    {
+      top: 66, left: 56.7,
+      name: 'The Town Center',
+      details: {
+        tag: 'solar powered',
+        photos: [
+          { src: 'images/town-center/middlebrook-town-center-lofts-peoples-company-farm-aerial.webp', alt: 'Aerial view of the Lofts and the Peoples Company building, with the Farm beyond' },
+          { src: 'images/town-center/middlebrook-town-center-main-street-storefronts-sidewalk.webp', alt: 'The sidewalk along the Main Street storefronts' },
+          { src: 'images/town-center/middlebrook-main-street-west-building-storefronts.webp', alt: 'The brick storefronts of the Lofts building on Main Street' }
+        ],
+        description: 'Where Middlebrook comes together: brick storefronts with the Lofts apartments upstairs, all heated and cooled by geothermal and powered by solar on their own roofs. Walk in to get a haircut, pick up a gift, or grab a cone after dinner.',
+        link: { text: 'The Town Center', href: 'middlebrook-town-center.html' }
+      }
+    },
+    {
+      top: 66.2, left: 61.6,
+      name: 'The Farmhouse',
+      details: {
+        tag: 'events',
+        photos: [
+          { src: 'images/farmhouse/middlebrook-farmhouse-front-porch-summer.jpg', alt: 'The Farmhouse front porch with white hydrangeas' },
+          { src: 'images/farm-grounds/middlebrook-farmhouse-lawn-private-event-spring.jpg', alt: 'Guests at picnic tables on the Farmhouse lawn under a blooming tree' },
+          { src: 'images/farmhouse/middlebrook-farmhouse-dining-table-flowers-fireplace.jpg', alt: 'The Farmhouse dining table set with flowers beside the fireplace' }
+        ],
+        description: 'A turn-of-the-century farmhouse on Middlebrook Farm. Host a shower, reunion, or dinner on the Farm Grounds, or book a weeknight stay.',
+        link: { text: 'Farmhouse and Farm Grounds', href: 'farmhouse-and-farm-grounds.html' }
+      }
+    },
+    {
+      top: 66.2, left: 64,
+      name: 'Fridays at the Farm',
+      details: {
+        tag: 'May to September',
+        photos: [
+          { src: 'images/home/Fridays-at-the-Farm/01-middlebrook-fridays-at-the-farm-band-on-porch.webp', alt: 'A band plays on the Farmhouse porch under string lights' },
+          { src: 'images/home/Fridays-at-the-Farm/07-middlebrook-fridays-at-the-farm-children-at-fence.webp', alt: 'Children watch the festivities from a wooden fence' },
+          { src: 'images/home/Fridays-at-the-Farm/11-middlebrook-fridays-at-the-farm-flower-garden-visitors.webp', alt: 'Visitors walk through the flower garden' }
+        ],
+        description: 'Live music, food trucks, and farmers’ market vendors on the Farm Grounds, every Friday from mid-May through September.',
+        link: { text: 'Fridays at the Farm', href: 'fridays-at-the-farm.html' }
+      }
+    },
+    {
+      top: 68.4, left: 62.8,
+      name: 'The Farm',
+      details: {
+        tag: 'town garden',
+        photos: [
+          { src: 'images/middlebrook-town-garden-aerial-windmill-high-tunnel.webp', alt: 'Aerial view of the Town Garden, windmill, and high tunnel' },
+          { src: 'images/middlebrook-farm-stand-open-doors.webp', alt: 'The Farm Stand with its doors open and produce inside' },
+          { src: 'images/middlebrook-you-pick-flower-field-black-eyed-susans.webp', alt: 'Black-eyed Susans in the you-pick flower field' }
+        ],
+        description: 'Two acres growing in the heart of the Town Center. Pick up fresh produce and eggs at the Farm Stand, say hello to the chickens, cut a bouquet in the you-pick flower field, or rent a garden plot of your own, even one in the high tunnel that grows all winter.',
+        link: { text: 'The Town Garden', href: 'town-garden.html' }
+      }
+    },
+    {
+      top: 64.6, left: 68.3,
+      name: 'The Merc',
+      details: {
+        photos: [
+          { src: 'images/middlebrook-mercantile-schoolhouse-string-lights.webp', alt: 'Middlebrook Mercantile, a restored brick schoolhouse, under string lights' },
+          { src: 'images/mercantile/middlebrook-mercantile-interior-brick-bar.webp', alt: 'The brick bar room inside the Mercantile' }
+        ],
+        description: 'Cocktails, wine, and local beer in Cumming’s 1900 one-room schoolhouse, with live music on weekends.',
+        walkLabel: 'Town Center Walkability',
+        walkTime: '1 minute',
+        link: { text: 'The Merc', href: 'the-merc.html' }
+      }
+    },
     {
       top: 65,
       left: 85,
@@ -62,12 +211,43 @@ window.MIDDLEBROOK_MAP = {
           { src: 'images/villas/parkland-a/middlebrook-villa-parkland-a-2730-exterior.webp', alt: 'A Parkland A villa with a covered porch and a red front door' },
           { src: 'images/villas/brierwood/middlebrook-villa-brierwood-2870-great-room.webp', alt: 'A vaulted great room with a fireplace and tall windows' }
         ],
-        description: 'Craftsman bungalow villas with the primary suite on the main level and a lower level you can finish now or later.',
+        description: 'Zero-entry craftsman villas with the primary suite on the main level. Stay in a single-family home of your own, and leave the lawn care and snow removal to the HOA.',
+        walkLabel: 'Town Center Walkability',
+        walkTime: '5 minutes',
         link: { text: 'The Villas', href: 'villas.html' }
       }
     },
-    { top: 36, left: 76, name: '[Place name]' },
-    { top: 60, left: 82, name: '[Place name]' }
+    {
+      top: 62.4, left: 84.8,
+      name: 'Mayor Tom Becker Park',
+      details: {
+        photos: [
+          { src: 'images/mayor-tom-becker-park/middlebrook-mayor-tom-becker-park-barn-and-windmill-tower.webp', alt: 'The play barn and windmill climbing tower at Mayor Tom Becker Park' },
+          { src: 'images/mayor-tom-becker-park/middlebrook-mayor-tom-becker-park-children-climbing-barn.webp', alt: 'Children climbing the play barn' },
+          { src: 'images/mayor-tom-becker-park/middlebrook-mayor-tom-becker-park-tractor-play-sculpture.jpg', alt: 'The tractor play sculpture' }
+        ],
+        description: 'An agriculture-inspired playground, built like a little farm: climb the windmill tower and the hay bales, explore the play barn, and take the wheel of a tractor, all in the heart of Great Western Crossing.',
+        walkLabel: 'Town Center Walkability',
+        walkTime: '8 minutes',
+        link: { text: 'Mayor Tom Becker Park', href: 'mayor-tom-becker-park.html' }
+      }
+    },
+    {
+      top: 58.6, left: 79.5,
+      name: 'Great Western Crossing',
+      details: {
+        tag: 'homes and lots',
+        photos: [
+          { src: 'images/single-family/middlebrook-home-410-n-36th-st.webp', alt: 'A white farmhouse in Great Western Crossing with twin dormers and a covered front porch' },
+          { src: 'images/great-western-crossing-exteriors/middlebrook-great-western-crossing-green-craftsman-front-porch.jpg', alt: 'A green craftsman home with a front porch' },
+          { src: 'images/great-western-crossing-exteriors/middlebrook-great-western-crossing-park-pergola.webp', alt: 'The pergola in a Great Western Crossing park' }
+        ],
+        description: 'Middlebrook’s first neighborhood, where front porches line the streets and no two homes are the same, with Mayor Tom Becker Park at its heart. Find a new build or resale, or buy a lot and build with the builder you trust.',
+        walkLabel: 'Town Center Walkability',
+        walkTime: '10 minutes',
+        link: { text: 'Single-family homes', href: 'single-family.html' }
+      }
+    }
   ]
 };
 
@@ -128,15 +308,33 @@ window.MIDDLEBROOK_MAP = {
       </div>`;
   };
 
+  // Turns the trail's "left,top" points into one smooth curve (Catmull-Rom spline drawn as Bezier segments)
+  const smoothPath = (points) => {
+    const p = points.trim().split(/\s+/).map((pair) => pair.split(',').map(Number));
+    if (p.length < 2) return '';
+    let d = `M${p[0][0]},${p[0][1]}`;
+    for (let i = 0; i < p.length - 1; i += 1) {
+      const [p0, p1, p2, p3] = [p[i - 1] || p[i], p[i], p[i + 1], p[i + 2] || p[i + 1]];
+      const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+      const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+      d += ` C${c1[0].toFixed(2)},${c1[1].toFixed(2)} ${c2[0].toFixed(2)},${c2[1].toFixed(2)} ${p2[0]},${p2[1]}`;
+    }
+    return d;
+  };
+
   const renderPins = () => {
     renderCount += 1;
-    return map.pins.map((pin, i) => {
+    const trail = map.trail ? `<svg class="map-trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${smoothPath(map.trail)}"/></svg>` : '';
+    return trail + map.pins.map((pin, i) => {
       const position = `top: ${Number(pin.top)}%; left: ${Number(pin.left)}%;`;
       const label = pin.name && !/^\[/.test(pin.name) ? ` aria-label="${esc(pin.name)}"` : '';
+      if (pin.label) {
+        return `<span class="map-label" style="${position}">${esc(pin.name)}</span>`;
+      }
       if (!pin.details) {
         return `<div class="pin" style="${position}"${label}><span class="pin-ring"></span><span class="pin-dot"></span></div>`;
       }
-      const side = Number(pin.left) > 55 ? ' pin-flip' : '';
+      const side = (Number(pin.left) > 55 ? ' pin-flip' : '') + (pin.trail ? ' pin-trail' : '');
       return `<div class="pin pin-featured${side}" style="${position}" tabindex="0"${label}><span class="pin-ring"></span><span class="pin-dot"></span>${renderDetails(pin, `map${renderCount}-pin${i}`)}</div>`;
     }).join('');
   };

@@ -80,11 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
         home.baths ? [home.baths, Number(home.baths) === 1 ? 'bath' : 'baths'] : null,
         home.sqft ? [home.sqft, 'sq ft'] : null,
         home.lowerLevel ? [`+${home.lowerLevel}`, 'sq ft finished lower level'] : null,
+        home.commercial ? [`+${home.commercial}`, 'commercial'] : null,
         home.garage ? [home.garage, 'car garage'] : null,
         home.acres ? [home.acres, 'acres'] : null
       ].filter(Boolean).map(([figure, label]) => `<div><dt class="accent">${formatCopy(figure)}</dt><dd>${formatCopy(label)}</dd></div>`).join('');
       // Type label for rows without a plan name (single-family homes), and the directory's filters
-      const typeLabel = { townhomes: 'Townhome', villas: 'Villa', cottages: 'Cottage', 'single-family': 'Single-family home', lots: 'Lot' }[home.type] || '';
+      const typeLabel = { townhomes: 'Townhome', villas: 'Villa', cottages: 'Cottage', 'single-family': 'Single-family home', lots: 'Lot', 'live-work': 'Live-work townhome' }[home.type] || '';
       const kicker = [home.address ? (home.plan || typeLabel) : '', home.neighborhood].filter(Boolean).map(formatCopy).join(' · ');
       const priceValue = Number(String(home.price || '').replace(/[^0-9.]/g, '')) || 0;
       const team = [home.builder, home.agent].filter(Boolean).map(formatCopy).join(' · ');
@@ -225,8 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (nav) {
     const navItems = Array.from(nav.querySelectorAll('.nav-item'));
     const navToggle = nav.querySelector('.nav-toggle');
-    const desktopHover = window.matchMedia('(min-width: 1081px) and (hover: hover)');
-    const isMobileMenu = () => window.matchMedia('(max-width: 1080px)').matches;
+    const desktopHover = window.matchMedia('(min-width: 1181px) and (hover: hover)');
+    const isMobileMenu = () => window.matchMedia('(max-width: 1180px)').matches;
     const navScrim = document.createElement('div');
     let closeTimer;
 
@@ -488,6 +489,21 @@ document.addEventListener('DOMContentLoaded', () => {
         next.focus();
       });
     });
+    // A link to a panel (href="#panel-id", or arriving with that hash) opens its tab and scrolls to the section
+    // A link to something inside a panel (such as one Vision Board idea) opens that panel and scrolls to it
+    const open = (id) => {
+      const target = document.getElementById(id);
+      const panel = target && target.closest('[role="tabpanel"]');
+      const tab = tabs.find((t) => t.getAttribute('aria-controls') === (panel ? panel.id : id));
+      if (!tab) return false;
+      select(tab);
+      (panel && panel !== target ? target : group).scrollIntoView({ block: 'start' });
+      return true;
+    };
+    document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', (e) => {
+      if (open(link.getAttribute('href').slice(1))) e.preventDefault();
+    }));
+    if (window.location.hash) open(decodeURIComponent(window.location.hash.slice(1)));
   });
 
   // Geothermal diagram: Winter / Summer buttons switch the flow direction and the explanation
@@ -790,7 +806,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('click', (event) => {
-    if (!event.target.closest('.pin-video-button, .resident-video-button, .event-video-button, [data-youtube], [data-dialog-open], [data-video-src]')) {
+    // event.detail is 0 for keyboard clicks (Enter on a form button), which carry no pointer position
+    if (event.detail !== 0 && !event.target.closest('.pin-video-button, .resident-video-button, .event-video-button, [data-youtube], [data-dialog-open], [data-video-src], [data-request-info]')) {
       // The map drawer handles its own backdrop clicks (see map.js)
       document.querySelectorAll('dialog[open]:not(.map-drawer)').forEach((dialog) => {
         const bounds = dialog.getBoundingClientRect();

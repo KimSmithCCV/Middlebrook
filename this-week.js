@@ -39,6 +39,6 @@ window.MIDDLEBROOK_THIS_WEEK = [
     label: 'Porchfest',
     title: '[Date]',
     detail: '[Start time] to [end time], [where].',
-    link: { text: 'Porchfest details', href: '#' }
+    link: { text: 'Porchfest details', href: 'porchfest.html' }
   }
 ];

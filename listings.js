@@ -9,13 +9,14 @@
   - Add a home by copying one { ... } block, pasting it into "homes", and changing the details.
     Delete a block when a home sells. Keep the commas and braces as they are.
   - "type" decides which page shows the home. Use one of:
-    'townhomes', 'villas', 'cottages', 'single-family', 'lots'
+    'townhomes', 'villas', 'cottages', 'single-family', 'lots', 'live-work'
   - "status" can also be 'Model home for sale' or 'Pending'.
   - "address" is optional for model homes. Without one, the plan name becomes the listing title.
   - "status" is optional and shows as a tag on the photo, like the interactive map tags: 'For sale', 'Pending', 'Coming soon', 'New construction', 'Resale'.
   - "plan" is the plan or style, for example 'One-story townhome' or 'Zero-entry villa: Parkland'.
   - "sqft" is the main finished square footage and "lowerLevel" is finished lower level square footage (numbers only,
-    for example '1,394'). "garage" is the number of cars. These show as large figures in each row.
+    for example '1,394'). "commercial" is the commercial square footage of a live-work townhome.
+    "garage" is the number of cars. These show as large figures in each row.
   - Every other line is optional; delete any a home does not need.
   - "link" is the full listing on Zillow, the brokerage site, or anywhere else. It opens in a new tab.
     Leave it as '' and the row shows only the contact links (or "Ask about this home" if there are none).
@@ -404,6 +405,30 @@ window.MIDDLEBROOK_LISTINGS = {
       agent: 'Kate Anderson, RE/MAX Concepts',
       photo: 'images/single-family/middlebrook-home-3671-n-callison-ave.webp',
       link: 'https://www.zillow.com/homedetails/3671-N-Callison-Ave-Cumming-IA-50061/445864609_zpid/'
+    },
+    {
+      type: 'live-work',
+      status: 'New construction',
+      plan: 'Live-work townhome',
+      neighborhood: 'Middlebrook Town Center',
+      address: '1103 S 44th Street #103',
+      price: '$850,000',
+      beds: 2,
+      baths: 2,
+      sqft: '1,450',
+      commercial: '1,240',
+      garage: 2,
+      perk: 'Fee simple: own your building just like a townhome',
+      features: 'These townhomes are designed to support local businesses while enhancing the walkable, community-focused lifestyle Middlebrook is known for. Owners can live above and work below, eliminating the commute and staying connected to the neighborhood. They also present a strong investment opportunity, with the option to lease either the commercial or residential space independently. Residentially, they offer approximately 1,450 square feet with two bedrooms, two bathrooms, open-concept living, a two-car garage, 600 square feet of basement bonus space for storage or a gym, and a private rooftop patio overlooking the Town Center. The main level includes approximately 1,240 square feet of commercial space delivered as a vanilla shell and ready for customization. The stand-alone space is flexible for retail, office, studio, or boutique use and features a separate entrance and dedicated electrical and mechanical systems, making it ideal for owner use or leasing as an investment.',
+      builder: 'Diligent Development',
+      agent: 'Peoples Company',
+      contacts: PEOPLES_COMPANY_AGENTS,
+      photos: [
+        { src: 'images/live-work-townhomes/middlebrook-live-work-townhomes-front-exterior.webp', alt: 'The Live-Work Townhomes from the street, with storefronts below, homes above, and rooftop patios' },
+        { src: 'images/live-work-townhomes/middlebrook-live-work-townhomes-storefront-rendering.webp', alt: 'Rendering of the storefronts up close, with brick piers, awnings, and glass double doors' },
+        { src: 'images/live-work-townhomes/middlebrook-live-work-townhomes-back-garages-rendering.webp', alt: 'Rendering of the back of the building, with a garage door for each unit' }
+      ],
+      link: ''
     }
   ]
 };

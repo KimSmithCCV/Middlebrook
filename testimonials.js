@@ -19,8 +19,8 @@ window.MIDDLEBROOK_TESTIMONIALS = {
   home: {
     quote: 'It gives a piece of country life, while still being just minutes away from the urban center of Des Moines.',
     name: '[Name], resident',
-    photo: 'images/home/Fridays-at-the-Farm/02-middlebrook-fridays-at-the-farm-picnic-gathering.webp',
-    alt: 'Friends and family gather around a picnic table at Fridays at the Farm'
+    photo: 'images/middlebrook-neighborhood-residents-walking-home.webp',
+    alt: 'A family walking home along a Middlebrook sidewalk, the kids on scooters'
   },
   fridays: {
     quote: 'Fridays at the Farm turned into a weekly ritual for us. It is the kind of place where the community really shows up.',
